@@ -33,3 +33,7 @@ export async function deletComment(req,res){
 
     res.send("deletion successfull");
 }
+
+export async function getComment(req,res){
+    res.send(await comment.find());
+}
