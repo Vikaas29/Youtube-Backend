@@ -9,4 +9,5 @@ export function commentRoutes(app){
     app.put("/comment",editComment);
 
     app.delete("/comment",deletComment);
+    
 }
