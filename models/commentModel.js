@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const userSchema = mongoose.Schema({
     "commentData":{type:String,required:true},
     "userName":{type:String,required:true},
-    "email":{type:String,required:true,unique:true},
+    "email":{type:String,required:true},
     "videoId":{type:String,required:true},
 });
 
