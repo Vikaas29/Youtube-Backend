@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import { userRoutes } from "./routes/userRoutes.js";
 import { commentRoutes } from "./routes/commentRoutes.js";
 import { videoRoutes } from "./routes/videoRoutes.js";
+import cors from 'cors';
 
 
 const app=new express();
@@ -29,6 +30,7 @@ app.listen(4000,()=>{
     console.log("server is running at port 4000");
 });
 
+app.use(cors());
 app.use(express.json());
 
 userRoutes(app);
