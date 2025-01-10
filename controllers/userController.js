@@ -27,7 +27,7 @@ export async function login(req,res){
         const accessToken =jwt.sign({_id:isEmail._id},"secretKey");
 
         return res.status(200).json({
-            "Message":"Login Successfull",
+            "message":"Login Successfull",
             "User":{
                 "userName":isEmail.userName,
                 "email":isEmail.email
