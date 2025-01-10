@@ -65,7 +65,7 @@ export async function registerUser(req,res){
         });
         await newUser.save();
 
-    return res.send("Registeration Successfull");
+    return res.status(201).json({message:"Registeration Successfull"});
 }
 }
 catch(err){
