@@ -5,10 +5,10 @@ export async function saveComment(req,res){
     try{const {commentData,userName,email,videoId}=req.body;
 
     const newComment=new comment({
-        commentData:commentData,
-        userName:userName,
-        email:email,
-        videoId:videoId
+        "commentData":commentData,
+        "userName":userName,
+        "email":email,
+        "videoId":videoId
     });
 
     await newComment.save();
