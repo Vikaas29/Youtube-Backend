@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
 
 const userSchema = mongoose.Schema({
-    "commentData":{type:String,required:true},
-    "userName":{type:String,required:true},
-    "email":{type:String,required:true},
-    "videoId":{type:String,required:true},
+    "commentData":{type:String},
+    "userName":{type:String},
+    "email":{type:String},
+    "videoId":{type:String},
 });
 
 const comment =mongoose.model("youtubeComments",userSchema);
