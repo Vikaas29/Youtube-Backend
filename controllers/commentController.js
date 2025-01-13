@@ -7,7 +7,7 @@ export async function saveComment(req,res){
     const newComment=new comment({
         "commentData":commentData,
         "userName":userName,
-        "email":email,
+        "userEmail":email,
         "videoId":videoId
     });
 
