@@ -12,7 +12,7 @@ export async function saveComment(req,res){
     });
 
     await newComment.save();
-    res.send("comment saved");
+    res.status(201).json({message:"comment saved"});
 }
 
 export async function editComment(req,res){
@@ -22,7 +22,7 @@ export async function editComment(req,res){
    await comment.updateOne({_id:id},{ $set: { commentData: commentData } })
 
     
-    res.send("comment saved");
+   res.status(201).json({message:"comment updated"});
 
 }
 
@@ -31,7 +31,7 @@ export async function deletComment(req,res){
 
     await comment.deleteOne({_id:id});
 
-    res.send("deletion successfull");
+    res.status(200).json({message:"comment deleted"});
 }
 
 export async function getComment(req,res){
