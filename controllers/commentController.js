@@ -2,7 +2,7 @@ import comment from "../models/commentModel.js";
 
 export async function saveComment(req,res){
 
-    const {commentData,userName,email,videoId}=req.body;
+    try{const {commentData,userName,email,videoId}=req.body;
 
     const newComment=new comment({
         commentData:commentData,
@@ -12,7 +12,10 @@ export async function saveComment(req,res){
     });
 
     await newComment.save();
-    res.status(201).json({message:"comment saved"});
+    res.status(201).json({message:"comment saved"});}
+    catch(err){
+        res.status(400).json({"message":err})
+    }
 }
 
 export async function editComment(req,res){
