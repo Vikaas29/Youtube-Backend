@@ -4,7 +4,7 @@ export async function saveComment(req,res){
 
     try{const {commentData,userName,email,videoId}=req.body;
 
-    const newComment=new comment({
+    const newComment= new comment({
         "commentData":commentData,
         "userName":userName,
         "userEmail":email,
