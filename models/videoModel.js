@@ -6,10 +6,11 @@ const userSchema = mongoose.Schema({
     title: String,
     thumbnail: String,
     description: String,
-    views: Number,
-    likes: Number,
-    uploadDate: String,
-    genre:String
+    views: {type:Number,default:0},
+    likes: {type:Number,default:0},
+    uploadDate: {type:String,default:"Today"},
+    genre:String,
+    owner:{type:String,default:""}
 });
 
 const video =mongoose.model("youtubeVideos",userSchema);
