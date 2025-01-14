@@ -44,3 +44,14 @@ export async function addVideo(req,res){
         res.status(400).json({"message":err});
       }
 }
+
+export async function deleteVideo(req,res){
+    try{const{id}=req.body
+
+    await video.deleteOne({_id:id});
+
+    res.status(200).json({message:"video deleted"});}
+    catch(err){
+        res.status(400).json({"message":err});
+      }
+}

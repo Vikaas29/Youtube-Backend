@@ -1,4 +1,4 @@
-import { addVideo, decreaseLikes, getVideos, increaseLikes } from "../controllers/videoController.js";
+import { addVideo, decreaseLikes, deleteVideo, getVideos, increaseLikes } from "../controllers/videoController.js";
 
 export function videoRoutes(app){
     app.get("/videos",getVideos);
@@ -8,4 +8,6 @@ export function videoRoutes(app){
     app.put("/downlike",decreaseLikes);
 
     app.post("/addvideo",addVideo);
+
+    app.delete("/deletevideo",deleteVideo);
 }
