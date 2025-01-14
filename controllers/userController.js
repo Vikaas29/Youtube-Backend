@@ -30,7 +30,9 @@ export async function login(req,res){
             "message":"Login Successfull",
             "User":{
                 "userName":isEmail.userName,
-                "email":isEmail.email
+                "email":isEmail.email,
+                "channelName":isEmail.channelName
+
             },
             "token":accessToken
         });
@@ -72,3 +74,4 @@ catch(err){
     return res.status(500).json(err.message);
 }
 }
+

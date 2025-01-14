@@ -4,6 +4,7 @@ import { userRoutes } from "./routes/userRoutes.js";
 import { commentRoutes } from "./routes/commentRoutes.js";
 import { videoRoutes } from "./routes/videoRoutes.js";
 import cors from 'cors';
+import { channelRoutes } from "./routes/channelRoutes.js";
 
 
 const app=new express();
@@ -38,3 +39,5 @@ userRoutes(app);
 commentRoutes(app);
 
 videoRoutes(app);
+
+channelRoutes(app);
