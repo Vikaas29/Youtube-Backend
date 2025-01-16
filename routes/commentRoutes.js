@@ -7,8 +7,8 @@ export function commentRoutes(app){
 
     app.post("/comment",checkLogin,saveComment);
 
-    app.put("/comment",editComment);
+    app.put("/comment",checkLogin,editComment);
 
-    app.delete("/comment",deletComment);
+    app.delete("/comment",checkLogin,deletComment);
     
 }
