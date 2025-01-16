@@ -8,7 +8,7 @@ export async function checkLogin(req,res,next){
     // to check the header
     if(!authHeader){
             res.status(404);
-        return res.send("Authorization Header Not Found");
+        return res.json({"message":"Authorization Header Not Found"});
     }
 
     const token=authHeader && authHeader.split(" ")[1];
