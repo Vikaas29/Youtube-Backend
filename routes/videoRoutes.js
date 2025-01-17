@@ -1,5 +1,6 @@
 import { addVideo, decreaseLikes, deleteVideo, getVideos, increaseLikes } from "../controllers/videoController.js";
 
+// routes for all video related actions
 export function videoRoutes(app){
     app.get("/videos",getVideos);
 

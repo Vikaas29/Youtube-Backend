@@ -1,9 +1,12 @@
 import video from "../models/videoModel.js";
 
+
+// controller to get all video data
 export async function getVideos(req,res) {
     res.send(await video.find());
 }
 
+// controller to increase like in a video data
 export async function increaseLikes(req,res) {
     
     const {id}=req.body;
@@ -13,6 +16,7 @@ export async function increaseLikes(req,res) {
     res.send("updation successfull");
 }
 
+// controller to decrease like in a video data
 export async function decreaseLikes(req,res) {
     
     const {id}=req.body;
@@ -23,6 +27,7 @@ export async function decreaseLikes(req,res) {
 
 }
 
+// controller to add video
 export async function addVideo(req,res){
     try{const{videoId,url,title,thumbnail,description,genre,owner}=req.body;
 
@@ -45,6 +50,7 @@ export async function addVideo(req,res){
       }
 }
 
+// controller to delete video
 export async function deleteVideo(req,res){
     try{const{id}=req.body
 

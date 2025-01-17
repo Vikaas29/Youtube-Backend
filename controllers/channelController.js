@@ -1,5 +1,7 @@
 import user from "../models/userModel.js";
 
+
+// controller to create channel
 export async function createChannel(req,res){
 
     
@@ -20,6 +22,7 @@ export async function createChannel(req,res){
  }
  }
 
+//  controller to delete channel
  export async function deleteChannel(req,res){
 
     

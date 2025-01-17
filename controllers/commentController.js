@@ -1,5 +1,7 @@
 import comment from "../models/commentModel.js";
 
+
+// controller to save individual sent comment
 export async function saveComment(req,res){
 
     try{const {commentData,userName,email,videoId}=req.body;
@@ -18,6 +20,7 @@ export async function saveComment(req,res){
     }
 }
 
+// controller to edit comment according to id
 export async function editComment(req,res){
     
     const {commentData,id}=req.body;
@@ -29,6 +32,7 @@ export async function editComment(req,res){
 
 }
 
+// controller to delete a id based comment
 export async function deletComment(req,res){
     const{id}=req.body
 

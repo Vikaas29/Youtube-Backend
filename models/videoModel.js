@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+// schema for video data
 const userSchema = mongoose.Schema({
     videoId: String,
     url:String,

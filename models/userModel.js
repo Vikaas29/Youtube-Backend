@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+// schema model for each registered user
 const userSchema = mongoose.Schema({
     "userName":{type:String,required:true},
     "email":{type:String,required:true,unique:true},

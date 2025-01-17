@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+// schema model for comments
 const userSchema = mongoose.Schema({
     "commentData":{type:String},
     "userName":{type:String},

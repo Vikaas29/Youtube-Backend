@@ -2,6 +2,8 @@ import user from "../models/userModel.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 
+
+// controller to process login
 export async function login(req,res){
 
     
@@ -43,6 +45,8 @@ catch(err){
 }
 }
 
+
+// controller to register user
 export async function registerUser(req,res){
 
     try{
